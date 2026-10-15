@@ -76,3 +76,70 @@
 @media (max-width: 560px) {
   .family-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Individual celebration pages */
+.event-detail-link {
+  display: inline-block;
+  margin-top: .55rem;
+  font-size: .68rem;
+  letter-spacing: .09em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: .2rem;
+}
+.event-detail-page {
+  min-height: 100vh;
+  background: var(--paper, #f7f2ea);
+}
+.event-detail-hero {
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 7rem 1.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(218,198,169,.35), transparent 42%),
+    radial-gradient(ellipse at 82% 72%, rgba(196,170,141,.24), transparent 38%),
+    #f7f2ea;
+}
+.event-detail-inner { width: min(100%, 52rem); position: relative; z-index: 1; }
+.event-detail-number { font-size: .72rem; letter-spacing: .2em; color: #8b765f; }
+.event-detail-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 1.05;
+  margin: 1.2rem 0;
+  color: #382d25;
+}
+.event-detail-title em { font-weight: 400; }
+.event-detail-description { max-width: 35rem; margin: 0 auto 1.6rem; line-height: 1.8; color: #76675b; }
+.event-detail-tag { font-size: .68rem; letter-spacing: .14em; color: #8b765f; margin-top: 2rem; }
+.event-detail-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 58rem;
+  margin: -2rem auto 0;
+  position: relative;
+  z-index: 2;
+  background: #fffdf8;
+  border: 1px solid #e4d9ca;
+}
+.event-detail-info > div { padding: 1.6rem; text-align: center; border-right: 1px solid #e4d9ca; }
+.event-detail-info > div:last-child { border-right: 0; }
+.event-detail-info .eyebrow { margin-bottom: .65rem; }
+.event-detail-info p { line-height: 1.6; margin: 0; }
+.event-detail-note { max-width: 42rem; text-align: center; margin: 4rem auto; padding: 0 1.5rem; }
+.event-detail-note h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; font-size: clamp(2rem, 5vw, 3.4rem); }
+.event-detail-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .8rem; margin-top: 1.6rem; }
+.event-detail-actions a { text-decoration: none; }
+.event-detail-back { display: inline-block; margin-top: 2rem; font-size: .72rem; letter-spacing: .12em; }
+@media (max-width: 650px) {
+  .event-detail-info { grid-template-columns: 1fr; margin: 0 1rem; }
+  .event-detail-info > div { border-right: 0; border-bottom: 1px solid #e4d9ca; }
+  .event-detail-info > div:last-child { border-bottom: 0; }
+  .event-detail-hero { min-height: 62vh; }
+}
