@@ -6,8 +6,8 @@ A free, static, mobile-friendly wedding invitation for Manaswita and Sushmit. It
 
 - `index.html` — the complete single-page wedding invitation
 - `style.css` — page styling, responsive layouts, and local event-photo styling
-- `assets/` — local photos used in the hero and five event cards; **upload this folder as well**
-- `config.js` and `script.js` — helper files retained for future customization / legacy page experiments
+- `assets/` — higher-resolution, locally bundled photos used in the hero and five event cards; **upload this folder as well**
+- `config.js` — the event and family details; `music.js` — the YouTube music player and discreet playback control
 - `mehendi.html`, `sangeet.html`, `haldi.html`, `wedding.html`, `reception.html` — optional older standalone event pages; the homepage does not link to them
 
 ## Upload or update the website on GitHub
@@ -33,9 +33,16 @@ The venue links open the Google Maps coordinates provided. Please verify the exa
 
 ## Design and technical notes
 
-- The main page uses mostly warm ivory with restrained dusty blush and muted mauve accents; no regional motifs, stars, or decorative arrows are used. The names reveal gently on first load, and selected sections fade up while scrolling. Motion is disabled for visitors who request reduced motion.
-- All six page photos are bundled locally, so they do not rely on third-party image hosting. Google Fonts is optional; system-serif fallbacks are included.
+- The main page uses warm ivory with restrained dusty blush and muted mauve accents. The wedding photo alone has a small alpana-inspired Bengali detail. Names reveal gently on first load, with subtle section fades; reduced-motion preferences are respected.
+- All six high-resolution page photos are bundled locally, so they do not rely on third-party image hosting. Event dates are shown without numbered prefixes for a cleaner editorial look. Google Fonts is optional; system-serif fallbacks are included.
 - The countdown targets 16 February 2027 at 7:00 PM India time.
 - No RSVP form is included.
 - The GitHub Pages website is public to anyone with the URL. Do not publish sensitive guest information.
-- Background music is not configured. If you add music later, only publish audio you have permission to use and make sure mobile-browser playback starts after a visitor interaction.
+- The provided YouTube track is configured in `music.js`; the page attempts playback on load and includes a small floating Music control. Browsers often block audible autoplay until a visitor taps, so the control remains available as a fallback. The site embeds the YouTube video rather than downloading or hosting its audio.
+
+## Latest refinements
+- Reworked the desktop/laptop event grid and compact mobile layouts.
+- Rebuilt all five standalone event detail pages to remove excessive whitespace.
+- Family cards show the full names Manaswita Bhaskar Datta and Sushmit Chandra Shekhar Prasad; the footer includes “Made with love.”
+- A restrained alpana-inspired line detail appears only over the wedding image. The desktop event grid balances the final two cards in the second row; tablets use two columns and phones use a single clean column.
+- The provided YouTube track is attempted on page load with a small floating music control as a fallback. Audible autoplay can be blocked by browser policy, so a visitor may need to tap the control.

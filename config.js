@@ -3,15 +3,15 @@
   Replace placeholder values with your real wedding details.
   Date format example: 2027-02-16T18:00:00+05:30 (use your actual wedding time).
   For map fields, paste each venue's Google Maps link.
-  For music, add an MP3 file you have permission to use to the repository and set musicFile to its filename.
+  Wedding music is embedded from the YouTube link configured in music.js. Browser autoplay rules may require a visitor tap.
 */
 window.WEDDING_CONFIG = {
-  partnerOne: "Manaswita",
-  partnerTwo: "Sushmit",
+  partnerOne: "Manaswita Bhaskar Datta",
+  partnerTwo: "Sushmit Chandra Shekhar Prasad",
   partnerOneShort: "Manaswita",
   partnerTwoShort: "Sushmit",
   dateLabel: "14–21 FEBRUARY · 2027",
-  city: "JAMSHEDPUR · AGARTALA, INDIA",
+  city: "JAMSHEDPUR & AGARTALA",
   weddingDate: "2027-02-16T19:00:00+05:30",
   eventOneName: "Mehendi",
   eventOneDate: "14 February 2027",
