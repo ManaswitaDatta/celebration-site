@@ -212,3 +212,58 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-top:0}button,a{-webkit
 .opening-names .opening-name{font-size:1em;color:#39272f;opacity:0;animation:openingFadeUp .9s 1.25s ease forwards}
 .opening-names .opening-heart{font-size:.72em;color:#a9767c;opacity:0;animation:openingHeart .75s 1.6s ease both}
 @media(prefers-reduced-motion:reduce){.opening-names .opening-name,.opening-names .opening-heart{opacity:1;animation:none!important}}
+
+/* Mobile name lockup: keep both first names and the heart on one line. */
+.opening-inner .opening-names {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+  white-space: nowrap !important;
+  gap: clamp(.18rem, 1vw, .55rem);
+  font-size: clamp(1.38rem, 5.5vw, 3.15rem);
+  letter-spacing: -.035em;
+}
+.opening-inner .opening-names .opening-name {
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+  width: auto;
+  white-space: nowrap !important;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  font-size: 1em;
+}
+.opening-inner .opening-names .opening-heart {
+  flex: 0 0 auto !important;
+  margin: 0;
+  font-size: .68em;
+  line-height: 1;
+}
+.hero h1.couple-names {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  gap: clamp(.16rem, 1vw, .65rem);
+}
+.hero h1.couple-names .hero-name {
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+.hero h1.couple-names .name-heart { flex: 0 0 auto !important; }
+@media (max-width: 430px) {
+  .opening-inner .opening-names { font-size: clamp(1.25rem, 6vw, 1.6rem); gap: .2rem; }
+  .hero h1.couple-names { font-size: clamp(1.5rem, 6.4vw, 1.95rem); letter-spacing: -.06em; gap: .18rem; }
+  .hero h1.couple-names .name-heart { font-size: .55em; }
+}
+@media (max-width: 340px) {
+  .opening-inner .opening-names { font-size: 1.22rem; gap: .15rem; }
+  .hero h1.couple-names { font-size: 1.42rem; gap: .14rem; }
+}
