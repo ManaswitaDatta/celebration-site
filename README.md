@@ -1,6 +1,6 @@
 # Our Wedding — GitHub Pages Website
 
-A free, static, mobile-friendly wedding invitation for Manaswita and Sushmit. It uses HTML, CSS, JavaScript, and bundled image files—no build step, paid host, or RSVP backend is required.
+A free, static, mobile-friendly wedding invitation for Manaswita Datta and Sushmit Shekhar. It uses HTML, CSS, JavaScript, and bundled image files—no build step, paid host, or RSVP backend is required.
 
 ## What is included
 
@@ -14,7 +14,7 @@ A free, static, mobile-friendly wedding invitation for Manaswita and Sushmit. It
 
 1. Open your existing GitHub repository.
 2. Upload the contents of this ZIP to the repository root, replacing `index.html` and `style.css` when asked.
-3. Make sure the `assets` folder is uploaded with all six `.jpg` files inside it. The image paths are relative, so the folder must sit beside `index.html` and `style.css`.
+3. Make sure the `assets` folder is uploaded with all `.jpg` files inside it, including the dedicated `hero-mobile.jpg` phone crop. The image paths are relative, so the folder must sit beside `index.html` and `style.css`.
 4. Commit the changes to the branch used by GitHub Pages (usually `main`).
 5. Open **Settings → Pages** and confirm the site is published from that branch and the root folder (`/`).
 6. Wait a few minutes, then open the published URL on your phone. If the old version remains, refresh the page or open it in a private/incognito tab.
@@ -33,7 +33,7 @@ The venue links open the Google Maps coordinates provided. Please verify the exa
 
 ## Design and technical notes
 
-- The main page uses warm ivory with restrained dusty blush and muted mauve accents. The wedding photo alone has a small alpana-inspired Bengali detail. Names reveal gently on first load, with subtle section fades; reduced-motion preferences are respected.
+- The main page uses warm ivory with restrained dusty blush and muted mauve accents. The wedding photo features both the groom’s topor and the bride’s mukut, with a restrained Bengali-inspired detail. Names reveal gently on first load, with subtle section fades; reduced-motion preferences are respected.
 - All six high-resolution page photos are bundled locally, so they do not rely on third-party image hosting. Event dates are shown without numbered prefixes for a cleaner editorial look. Google Fonts is optional; system-serif fallbacks are included.
 - The countdown targets 16 February 2027 at 7:00 PM India time.
 - No RSVP form is included.
@@ -46,3 +46,8 @@ The venue links open the Google Maps coordinates provided. Please verify the exa
 - Family cards show the full names Manaswita Bhaskar Datta and Sushmit Chandra Shekhar Prasad; the footer includes “Made with love.”
 - A restrained alpana-inspired line detail appears only over the wedding image. The desktop event grid balances the final two cards in the second row; tablets use two columns and phones use a single clean column.
 - The provided YouTube track is attempted on page load with a small floating music control as a fallback. Audible autoplay can be blocked by browser policy, so a visitor may need to tap the control.
+
+
+Name presentation: the hero uses “Manaswita ♥ Sushmit” for legibility; the family cards show the requested full names “Manaswita Datta” and “Sushmit Shekhar.” Parents’ names are intentionally omitted from the cards.
+
+- Reception copy now explicitly says “mocktails.” A dedicated mobile hero image keeps the couple in frame on phone screens.

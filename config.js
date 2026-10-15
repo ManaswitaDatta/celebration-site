@@ -6,8 +6,8 @@
   Wedding music is embedded from the YouTube link configured in music.js. Browser autoplay rules may require a visitor tap.
 */
 window.WEDDING_CONFIG = {
-  partnerOne: "Manaswita Bhaskar Datta",
-  partnerTwo: "Sushmit Chandra Shekhar Prasad",
+  partnerOne: "Manaswita Datta",
+  partnerTwo: "Sushmit Shekhar",
   partnerOneShort: "Manaswita",
   partnerTwoShort: "Sushmit",
   dateLabel: "14–21 FEBRUARY · 2027",

@@ -55,3 +55,70 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-top:0}button,a{-webkit
   .event-copy { padding: 1.05rem 1rem 1.15rem; }
   .family-card h3 { font-size: clamp(1.55rem, 6.8vw, 2rem); line-height: 1.2; }
 }
+
+
+/* Final name and family-section refinement */
+.hero .hero-content{position:relative;z-index:1;width:min(760px,64vw);margin:0 auto;padding:clamp(2rem,4vw,3.5rem) 1.4rem;text-align:center;}
+.hero:after{background:linear-gradient(90deg,rgba(251,247,242,.24),rgba(251,247,242,.73) 38%,rgba(251,247,242,.30)),linear-gradient(0deg,rgba(251,247,242,.22),rgba(251,247,242,.12));}
+.hero h1.couple-names{display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:center;align-items:center;gap:clamp(.45rem,1.5vw,1.3rem);margin:.8rem auto 1.1rem;font-size:clamp(2.55rem,5.3vw,5.15rem);line-height:1.06;letter-spacing:-.045em;color:#38272e;max-width:100%;}
+.hero h1.couple-names span{white-space:nowrap;}
+.hero h1.couple-names .name-heart{color:#a9767c;font-family:Georgia,serif;font-size:.62em;line-height:1;flex:none;}
+.hero .hero-date,.hero .hero-place,.hero .invitation-tagline{color:#4f3a42;text-shadow:0 1px 8px rgba(255,250,245,.48);}
+.family-card h3{font-size:clamp(1.9rem,3vw,2.8rem);overflow-wrap:normal;word-break:normal;text-wrap:balance;}
+.family-card p:not(.eyebrow){display:none;}
+.site-footer .footer-names span{color:#a9767c;padding:0 .2rem;}
+@media(max-width:760px){
+ .hero .hero-content{width:100%;max-width:none;margin:0;padding:1.2rem .8rem 2.2rem;}
+ .hero h1.couple-names{flex-wrap:wrap;gap:.38rem;font-size:clamp(2.35rem,8.7vw,3.45rem);line-height:1.12;margin:.5rem auto .8rem;}
+ .hero h1.couple-names span{white-space:nowrap;}
+ .hero h1.couple-names .name-heart{font-size:.55em;}
+ .family-card h3{font-size:clamp(1.75rem,7vw,2.25rem);line-height:1.15;}
+}
+@media(max-width:360px){.hero h1.couple-names{font-size:clamp(2.05rem,8.3vw,2.55rem);gap:.28rem;}}
+
+
+/* Final revision: readable full names, no separate bride/groom cards, event-specific images. */
+.hero:after{background:linear-gradient(90deg,rgba(251,247,242,.30) 0%,rgba(251,247,242,.88) 44%,rgba(251,247,242,.64) 67%,rgba(251,247,242,.12) 100%),linear-gradient(0deg,rgba(251,247,242,.24),rgba(251,247,242,.12))}
+.hero .hero-content{width:min(900px,74vw);margin:0 auto;position:relative;z-index:1;padding:clamp(2rem,4.3vw,3.7rem) 1.2rem;text-align:center}
+.hero h1.couple-names{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;justify-content:center;gap:clamp(.5rem,1.4vw,1.3rem);width:100%;max-width:900px;margin:.6rem auto 1.25rem;font-size:clamp(2rem,3.45vw,3.65rem);line-height:1.08;letter-spacing:-.045em;color:#2f2026;text-shadow:0 1px 0 rgba(255,250,245,.65)}
+.hero h1.couple-names span{white-space:normal;min-width:0;overflow-wrap:normal;word-break:normal}
+.hero h1.couple-names span:first-child{text-align:right}
+.hero h1.couple-names span:last-child{text-align:left}
+.hero h1.couple-names .name-heart{color:#9a626d;font-size:.62em;line-height:1;flex:none;text-shadow:none}
+.hero .eyebrow,.hero .hero-date,.hero .hero-place,.hero .invitation-tagline{color:#422f37;text-shadow:0 1px 5px rgba(255,250,245,.55)}
+.hero .eyebrow{font-weight:700}
+.hero-date{margin-top:1rem}
+/* No oversized family display cards; family names are represented in the invitation itself. */
+.intro-section{padding-top:clamp(3.25rem,6vw,6rem);padding-bottom:clamp(3.25rem,6vw,6rem)}
+.photo-sangeet{background-image:url("assets/sangeet.jpg");background-position:center 44%}
+.photo-wedding{background-image:linear-gradient(0deg,rgba(69,40,48,.035),rgba(69,40,48,.035)),url("assets/wedding.jpg");background-position:center 47%}
+.photo-reception{background-image:url("assets/reception.jpg");background-position:center 48%}
+.event-page-sangeet .event-detail-photo{background-image:url("assets/sangeet.jpg");background-position:center 44%}
+.event-page-wedding .event-detail-photo{background-image:url("assets/wedding.jpg");background-position:center 47%}
+.event-page-reception .event-detail-photo{background-image:url("assets/reception.jpg");background-position:center 48%}
+.event-card-wedding .event-photo:after,.photo-wedding:after{width:70px;height:70px;opacity:.45}
+@media(max-width:760px){
+ .hero:after{background:linear-gradient(0deg,rgba(251,247,242,.98) 0%,rgba(251,247,242,.94) 42%,rgba(251,247,242,.16) 100%)}
+ .hero .hero-content{width:100%;max-width:none;margin:0;padding:1.15rem 1rem 2.25rem;background:linear-gradient(180deg,#fbf1eb 0%,#fbf7f2 100%)}
+ .hero h1.couple-names{grid-template-columns:minmax(0,1fr);gap:.15rem;font-size:clamp(2.15rem,8.5vw,3.25rem);line-height:1.06;margin:.55rem auto .9rem}
+ .hero h1.couple-names span:first-child,.hero h1.couple-names span:last-child{text-align:center}
+ .hero h1.couple-names .name-heart{grid-row:auto;font-size:.56em;margin:.05rem auto}
+ .hero-date{font-size:.66rem;letter-spacing:.12em}
+ .intro-section{padding-top:2.6rem;padding-bottom:2.8rem}
+}
+@media(max-width:360px){.hero h1.couple-names{font-size:clamp(1.95rem,8.4vw,2.4rem)}}
+
+
+/* Mobile hero uses a composition cropped for phone aspect ratios, so the couple stays in frame. */
+@media (max-width: 760px) {
+  .hero-art {
+    background-image: url("assets/hero-mobile.jpg") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    height: clamp(220px, 70.2vw, 360px) !important;
+    min-height: 0;
+    flex: 0 0 auto;
+  }
+  .photo-wedding { background-position: center center !important; }
+  .event-page-wedding .event-detail-photo { background-position: center center !important; }
+}
