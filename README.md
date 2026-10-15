@@ -21,16 +21,6 @@ A free, static, mobile-friendly wedding invitation for Manaswita Datta and Sushm
 
 For a new repository on GitHub Free, select a public repository and enable Pages under **Settings → Pages → Deploy from a branch**, choosing `main` and `/ (root)`. The default `https://YOUR-USERNAME.github.io/REPOSITORY/` address is free; a custom domain is optional.
 
-## Current invitation details
-
-- Mehendi — 14 February 2027, 7 PM onwards, F Road, Sonari, Jamshedpur
-- Sangeet & Ring Ceremony — 15 February 2027, 7 PM onwards, F Road, Sonari, Jamshedpur
-- Haldi — 16 February 2027, 10 AM onwards, F Road, Sonari, Jamshedpur
-- Wedding — 16 February 2027, 7 PM onwards, Beldih Golf Course, Sonari, Jamshedpur
-- Reception — 21 February 2027, 7 PM onwards, The Parkline Hotel, Agartala
-
-The venue links open the Google Maps coordinates provided. Please verify the exact pins and venue entrances before sending the invitation to guests.
-
 ## Design and technical notes
 
 - The main page uses warm ivory with restrained dusty blush and muted mauve accents. The wedding photo features both the groom’s topor and the bride’s mukut, with a restrained Bengali-inspired detail. Names reveal gently on first load, with subtle section fades; reduced-motion preferences are respected.
