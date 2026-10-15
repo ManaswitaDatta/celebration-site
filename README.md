@@ -1,64 +1,41 @@
 # Our Wedding — GitHub Pages Website
 
-This is a complete static wedding invitation website. It uses HTML, CSS and JavaScript, so it does not need a build step, AI credits, a server, an RSVP backend, or a paid hosting plan.
+A free, static, mobile-friendly wedding invitation for Manaswita and Sushmit. It uses HTML, CSS, JavaScript, and bundled image files—no build step, paid host, or RSVP backend is required.
 
-## Files
-- `index.html` — website content and sections
-- `style.css` — luxury editorial styling and responsive mobile layout
-- `config.js` — names, wedding date, event schedule, venue/map links and music filename
-- `script.js` — live countdown, map link handling and optional music control
+## What is included
 
-## 1. Upload to GitHub
-1. Sign in to GitHub or create a free account at https://github.com/.
-2. Click **+** → **New repository**.
-3. Name it `our-wedding`.
-4. Select **Public** (GitHub Pages is available for public repositories on GitHub Free).
-5. Click **Create repository**.
-6. Click **Add file** → **Upload files**.
-7. Upload these four files from this folder: `index.html`, `style.css`, `config.js`, and `script.js`.
-8. Commit the upload.
+- `index.html` — the complete single-page wedding invitation
+- `style.css` — page styling, responsive layouts, and local event-photo styling
+- `assets/` — local photos used in the hero and five event cards; **upload this folder as well**
+- `config.js` and `script.js` — helper files retained for future customization / legacy page experiments
+- `mehendi.html`, `sangeet.html`, `haldi.html`, `wedding.html`, `reception.html` — optional older standalone event pages; the homepage does not link to them
 
-## 2. Publish with GitHub Pages
-1. Open the repository's **Settings**.
-2. Select **Pages** from the left sidebar.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select branch `main` and folder `/ (root)`.
-5. Click **Save**.
-6. Wait a few minutes and refresh the Pages screen. GitHub will show your published URL, usually `https://YOUR-USERNAME.github.io/our-wedding/`.
-7. Open that URL on your phone and test it before sharing it.
+## Upload or update the website on GitHub
 
-## 3. Personalize the wedding details
-Open `config.js` in GitHub and click the pencil icon to edit. Replace:
-- `partnerOne` and `partnerTwo` with your names
-- `dateLabel` with the display date
-- `weddingDate` with your exact date/time in ISO format, including India timezone (`+05:30`), e.g. `2027-02-14T17:00:00+05:30` — example only, not your actual date
-- event names, dates, times and descriptions (the schedule currently lists Mehendi on 14 Feb evening; Sangeet & Ring Ceremony on 15 Feb evening; Haldi on 16 Feb morning; Wedding on 16 Feb evening; Reception on 21 Feb evening)
-- venue name and address
-- `eventOneMap`, `eventTwoMap`, `eventThreeMap`, and `mainVenueMap` with Google Maps URLs
+1. Open your existing GitHub repository.
+2. Upload the contents of this ZIP to the repository root, replacing `index.html` and `style.css` when asked.
+3. Make sure the `assets` folder is uploaded with all six `.jpg` files inside it. The image paths are relative, so the folder must sit beside `index.html` and `style.css`.
+4. Commit the changes to the branch used by GitHub Pages (usually `main`).
+5. Open **Settings → Pages** and confirm the site is published from that branch and the root folder (`/`).
+6. Wait a few minutes, then open the published URL on your phone. If the old version remains, refresh the page or open it in a private/incognito tab.
 
-Click **Commit changes** after editing. GitHub Pages will update the website after a short delay.
+For a new repository on GitHub Free, select a public repository and enable Pages under **Settings → Pages → Deploy from a branch**, choosing `main` and `/ (root)`. The default `https://YOUR-USERNAME.github.io/REPOSITORY/` address is free; a custom domain is optional.
 
-## 4. Optional background music
-Only use an audio file you have permission to publish. Upload an MP3 to the repository, then set `musicFile` in `config.js` to the filename, such as `our-song.mp3`. Music intentionally does not autoplay because mobile browsers usually block autoplay.
+## Current invitation details
 
-## Important notes
-- The countdown stays blank until you add the exact `weddingDate`.
-- Venue direction links show a reminder until a map URL is added.
-- The website contains placeholder names and dates until you edit them; do not send the link to guests before updating.
-- A GitHub Pages website is public to anyone with the URL; it is not password-protected. Avoid putting sensitive guest information on it.
-- The design uses Google Fonts, which require an internet connection; fallback fonts are included.
-- You do not need a custom domain. The free `github.io` address is enough to share on WhatsApp.
+- Mehendi — 14 February 2027, 7 PM onwards, F Road, Sonari, Jamshedpur
+- Sangeet & Ring Ceremony — 15 February 2027, 7 PM onwards, F Road, Sonari, Jamshedpur
+- Haldi — 16 February 2027, 10 AM onwards, F Road, Sonari, Jamshedpur
+- Wedding — 16 February 2027, 7 PM onwards, Beldih Golf Course, Sonari, Jamshedpur
+- Reception — 21 February 2027, 7 PM onwards, The Parkline Hotel, Agartala
 
+The venue links open the Google Maps coordinates provided. Please verify the exact pins and venue entrances before sending the invitation to guests.
 
-## Event venues configured
+## Design and technical notes
 
-- Mehendi, Sangeet & Ring Ceremony, and Haldi: F Road, Sonari, Jamshedpur
-- Wedding Ceremony: Bellevue Golf Course, Sonari, Jamshedpur
-- Reception: The Park Hotel, Agartala
-
-Each event's map link opens a Google Maps search for the venue. Confirm the exact pin and address before sharing the invitation widely.
-
-
-## Final wedding details
-
-Event venue addresses are shown on each event card, with Google Maps search links. Background music is optional: add a licensed MP3 file to the repository and set `musicFile` in `config.js`. No RSVP form is included.
+- The main page uses mostly warm ivory with restrained dusty blush and muted mauve accents; no regional motifs, stars, or decorative arrows are used. The names reveal gently on first load, and selected sections fade up while scrolling. Motion is disabled for visitors who request reduced motion.
+- All six page photos are bundled locally, so they do not rely on third-party image hosting. Google Fonts is optional; system-serif fallbacks are included.
+- The countdown targets 16 February 2027 at 7:00 PM India time.
+- No RSVP form is included.
+- The GitHub Pages website is public to anyone with the URL. Do not publish sensitive guest information.
+- Background music is not configured. If you add music later, only publish audio you have permission to use and make sure mobile-browser playback starts after a visitor interaction.
