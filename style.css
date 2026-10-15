@@ -186,3 +186,29 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-top:0}button,a{-webkit
  .flower-stem{stroke-dashoffset:0}
  .scroll-reveal{opacity:1;transform:none}
 }
+
+
+/* Final name cleanup: keep the couple names to the opening and hero only. */
+.opening-names{display:flex;align-items:center;justify-content:center;gap:clamp(.45rem,2vw,1rem);white-space:nowrap;font-size:clamp(1.7rem,5.2vw,3.15rem);line-height:1.1}
+.opening-names .opening-name{display:inline-block;white-space:nowrap}
+.opening-names .opening-heart{display:inline-block;flex:0 0 auto;color:#a9767c;font-size:.72em;animation:openingHeart .9s 1.8s ease both}
+.hero h1.couple-names{display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;justify-content:center;gap:clamp(.45rem,1.6vw,1.25rem);width:100%;max-width:1000px;margin:.6rem auto 1.25rem;font-size:clamp(2rem,4.4vw,4.25rem);line-height:1.08;letter-spacing:-.045em;color:#2f2026;text-shadow:0 1px 0 rgba(255,250,245,.65)}
+.hero h1.couple-names .hero-name{display:block;min-width:0;white-space:nowrap;text-align:center}
+.hero h1.couple-names .name-heart{display:inline-block;flex:0 0 auto;color:#9a626d;font-size:.62em;line-height:1;text-shadow:none}
+/* The names are not repeated in the story artwork, story copy, or event heading. */
+.art-caption{letter-spacing:.16em}
+@media(max-width:760px){
+ .opening-names{gap:.42rem;font-size:clamp(1.6rem,7vw,2.25rem);margin:.4rem 0 .8rem}
+ .opening-names .opening-name{white-space:nowrap}
+ .hero h1.couple-names{display:flex;flex-direction:row;flex-wrap:nowrap;gap:clamp(.22rem,1.5vw,.55rem);font-size:clamp(1.75rem,7.1vw,2.7rem);line-height:1.1;letter-spacing:-.055em;margin:.55rem auto .9rem}
+ .hero h1.couple-names .hero-name{white-space:nowrap}
+ .hero h1.couple-names .name-heart{font-size:.56em}
+}
+@media(max-width:370px){
+ .opening-names{font-size:1.48rem;gap:.28rem}
+ .hero h1.couple-names{font-size:clamp(1.48rem,6.5vw,1.8rem);gap:.2rem;letter-spacing:-.06em}
+}
+/* Keep the names calm and readable while only the heart receives its small flourish. */
+.opening-names .opening-name{font-size:1em;color:#39272f;opacity:0;animation:openingFadeUp .9s 1.25s ease forwards}
+.opening-names .opening-heart{font-size:.72em;color:#a9767c;opacity:0;animation:openingHeart .75s 1.6s ease both}
+@media(prefers-reduced-motion:reduce){.opening-names .opening-name,.opening-names .opening-heart{opacity:1;animation:none!important}}
