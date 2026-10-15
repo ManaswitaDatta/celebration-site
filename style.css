@@ -122,3 +122,67 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-top:0}button,a{-webkit
   .photo-wedding { background-position: center center !important; }
   .event-page-wedding .event-detail-photo { background-position: center center !important; }
 }
+
+
+/* Elegant animated opening: a botanical flower unfolds, then reveals the invitation. */
+.opening-intro{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 44%,#fffaf5 0%,#f8ece5 60%,#efddd7 100%);transition:opacity .85s ease,visibility .85s ease}
+.opening-intro.opening-gone{opacity:0;visibility:hidden;pointer-events:none}
+.opening-inner{width:min(92vw,540px);padding:2rem 1.2rem;text-align:center;animation:openingLift 1s ease both}
+.opening-label{margin:0 0 1.1rem;color:#a9767c;font-size:.64rem;letter-spacing:.18em;line-height:1.8;text-transform:uppercase;opacity:0;animation:openingFadeUp .8s .65s ease forwards}
+.opening-flower{display:block;width:clamp(118px,24vw,154px);height:auto;margin:0 auto 1rem;overflow:visible}
+.flower-stem{fill:none;stroke:#b78386;stroke-width:1.1;stroke-linecap:round;stroke-dasharray:140;stroke-dashoffset:140;animation:openingDraw 1s .15s ease forwards}
+.bloom-petal{transform-box:fill-box;transform-origin:center bottom;opacity:0;transform:scale(.1) rotate(-16deg);animation:openingPetal .85s cubic-bezier(.2,.8,.25,1) forwards}
+.bloom-petal.petal-1{animation-delay:.3s}.bloom-petal.petal-2{animation-delay:.42s}.bloom-petal.petal-3{animation-delay:.54s}.bloom-petal.petal-4{animation-delay:.66s}.bloom-petal.petal-5{animation-delay:.78s}.bloom-petal.petal-6{animation-delay:.9s}
+.flower-center{transform-box:fill-box;transform-origin:center;opacity:0;transform:scale(.1);animation:openingCenter .5s 1.05s ease forwards}
+.opening-names{margin:.35rem 0 .75rem;color:#39272f;font-family:var(--serif);font-size:clamp(2rem,6.2vw,3.35rem);font-weight:400;line-height:1.16;opacity:0;animation:openingFadeUp .9s 1.25s ease forwards}
+.opening-names span{display:inline-block;color:#a9767c;font-size:.8em;animation:openingHeart .9s 1.8s ease both}
+.opening-date{margin:0;color:#77666c;font-size:.64rem;letter-spacing:.13em;line-height:1.8;opacity:0;animation:openingFadeUp .8s 1.7s ease forwards}
+.opening-skip{position:absolute;right:1rem;bottom:1rem;border:1px solid #d8bfba;border-radius:999px;background:rgba(255,253,250,.72);padding:.65rem .95rem;color:#795a62;font:500 .63rem/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s}
+.opening-skip:hover{background:#a9767c;color:white}
+@keyframes openingDraw{to{stroke-dashoffset:0}}@keyframes openingPetal{0%{opacity:0;transform:scale(.1) rotate(-20deg)}75%{opacity:1;transform:scale(1.06) rotate(2deg)}100%{opacity:1;transform:scale(1) rotate(0)}}@keyframes openingCenter{to{opacity:1;transform:scale(1)}}@keyframes openingFadeUp{from{opacity:0;transform:translateY(11px)}to{opacity:1;transform:translateY(0)}}@keyframes openingLift{from{transform:translateY(8px);opacity:.7}to{transform:translateY(0);opacity:1}}@keyframes openingHeart{0%{transform:scale(.55);opacity:0}65%{transform:scale(1.14);opacity:1}100%{transform:scale(1);opacity:1}}
+/* Parents appear as a quiet text-led dedication, not separate bride/groom boxes. */
+.families-section{padding-top:clamp(3.4rem,5.5vw,5.5rem);padding-bottom:clamp(3.1rem,5vw,4.7rem);background:#f1e6e0}
+.families-inner{max-width:1050px;margin:0 auto}
+.families-section .eyebrow{margin-bottom:.55rem}
+.families-section h2{margin:.2rem 0 1.8rem;font-size:clamp(2.35rem,4vw,3.65rem)}
+.parents-grid{display:grid;grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr);align-items:center;gap:clamp(.7rem,2vw,1.8rem);max-width:1000px;margin:0 auto}
+.parents-column{padding:1rem .75rem;min-width:0}
+.parents-label{margin:0 0 .65rem;color:#a9767c;font-size:.61rem;font-weight:600;letter-spacing:.15em;line-height:1.7}
+.parents-names{margin:0;color:#54434b;font-family:var(--serif);font-size:clamp(1.08rem,1.8vw,1.42rem);line-height:1.65;text-wrap:balance}
+.parents-names span{color:#a9767c;padding:0 .22rem;white-space:nowrap}
+.parents-divider{height:62px;display:flex;align-items:center;justify-content:center;position:relative;color:#b17a82;font-size:.9rem}
+.parents-divider:before{content:"";position:absolute;top:0;bottom:0;left:50%;width:1px;background:#d9bfc0}
+.parents-divider span{position:relative;background:#f1e6e0;padding:.3rem}
+.family-note{margin:1.55rem auto 0;color:#806c72;font-family:var(--serif);font-size:1rem;font-style:italic;line-height:1.7}
+.celebration-couple{margin:-.1rem 0 .8rem;color:#80606b;font-family:var(--serif);font-size:1.14rem;letter-spacing:.015em}
+.celebration-couple span{color:#a9767c;padding:0 .18rem;font-family:Georgia,serif}
+/* Gentle scroll reveals. The observer in script.js only animates elements as they enter view. */
+.scroll-reveal{opacity:0;transform:translateY(18px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--delay,0ms)}
+.scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
+.event-card.scroll-reveal.is-visible:hover{transform:translateY(-3px)}
+/* With the duplicate Details button removed, use a two-part desktop header. */
+.topbar{grid-template-columns:auto minmax(0,1fr)}
+.topbar nav{justify-content:flex-end;gap:clamp(.8rem,2.2vw,2.2rem)}
+.monogram{font-size:clamp(1.2rem,1.7vw,1.5rem);letter-spacing:.025em}
+.monogram span{font-size:1em;letter-spacing:0}
+@media(max-width:760px){
+ .topbar{grid-template-columns:1fr;justify-items:center;gap:.25rem;padding:.6rem .7rem}
+ .monogram{font-size:1.15rem;line-height:1.2}
+ .topbar nav{grid-column:auto;grid-row:auto;justify-content:center;gap:clamp(.8rem,5vw,1.4rem);flex-wrap:wrap}
+ .parents-grid{grid-template-columns:minmax(0,1fr);gap:0}
+ .parents-column{padding:.65rem .15rem}
+ .parents-divider{height:24px}
+ .parents-divider:before{top:0;bottom:0}
+ .parents-names{font-size:1.08rem;line-height:1.7}
+ .family-note{font-size:.95rem;margin-top:1.2rem}
+ .celebration-couple{font-size:1.12rem}
+ .opening-label{max-width:280px;margin:0 auto 1rem;font-size:.59rem}
+ .opening-date{max-width:280px;margin:0 auto;font-size:.59rem;line-height:1.9}
+}
+@media(prefers-reduced-motion:reduce){
+ .opening-intro,.opening-inner,.opening-label,.opening-flower *,.opening-names,.opening-names span,.opening-date,.scroll-reveal{animation:none!important;transition:none!important}
+ .opening-label,.opening-names,.opening-date{opacity:1;transform:none}
+ .bloom-petal,.flower-center{opacity:1;transform:none}
+ .flower-stem{stroke-dashoffset:0}
+ .scroll-reveal{opacity:1;transform:none}
+}
