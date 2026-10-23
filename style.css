@@ -315,3 +315,88 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-top:0}button,a{-webkit
   }
   .hero h1.couple-names .name-heart { font-size: .56em !important; }
 }
+
+
+/* Enhanced responsive couple lockup: the heart stays between the names, never at the edges. */
+.hero h1.couple-names {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: .65rem auto 1.15rem !important;
+  text-align: center !important;
+  white-space: normal !important;
+  font-size: clamp(2rem, 4.1vw, 3.45rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.045em !important;
+}
+.hero h1.couple-names .names-lockup {
+  display: inline-flex !important;
+  flex-flow: row nowrap !important;
+  align-items: baseline !important;
+  justify-content: center !important;
+  gap: clamp(.16rem, .8vw, .48rem) !important;
+  width: max-content !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
+  vertical-align: baseline;
+}
+.hero h1.couple-names .names-lockup .hero-name {
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+.hero h1.couple-names .names-lockup .name-heart {
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #a9767c !important;
+  font-size: .56em !important;
+  line-height: 1 !important;
+  text-shadow: none !important;
+}
+/* Slightly softer layout on tablet-sized phones and regular phones. */
+@media (max-width: 900px) {
+  .hero { min-height: 0 !important; display: flex !important; flex-direction: column !important; align-items: stretch !important; }
+  .hero .hero-art { position: relative !important; inset: auto !important; width: 100% !important; height: clamp(220px, 48vw, 360px) !important; flex: 0 0 auto !important; background-position: center 47% !important; }
+  .hero:after { background: linear-gradient(0deg, rgba(251,247,242,.98) 0%, rgba(251,247,242,.10) 55%, rgba(251,247,242,.04) 100%) !important; }
+  .hero .hero-content { position: relative !important; z-index: 1 !important; width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 1.65rem clamp(1rem,4vw,2.25rem) 2.5rem !important; background: linear-gradient(180deg,#fbf7f2 0%,#fbf7f2 100%) !important; text-align: center !important; }
+  .hero h1.couple-names { font-size: clamp(1.8rem, 5.3vw, 2.65rem) !important; margin: .45rem auto .85rem !important; letter-spacing: -.05em !important; }
+  .hero-date { margin-top: .6rem !important; font-size: .67rem !important; letter-spacing: .13em !important; }
+  .hero-place { font-size: .61rem !important; letter-spacing: .11em !important; }
+  .invitation-tagline { margin: .75rem auto 1rem !important; font-size: 1.05rem !important; line-height: 1.55 !important; }
+  .hero-side-note { display: none !important; }
+}
+@media (max-width: 430px) {
+  .hero .hero-art { height: clamp(220px, 64vw, 285px) !important; background-position: 53% 48% !important; }
+  .hero .hero-content { padding: 1.25rem .75rem 2rem !important; }
+  .hero h1.couple-names { font-size: clamp(1.55rem, 6.1vw, 1.85rem) !important; letter-spacing: -.055em !important; gap: .12rem !important; }
+  .hero h1.couple-names .names-lockup { gap: .18rem !important; }
+  .hero h1.couple-names .names-lockup .name-heart { font-size: .55em !important; }
+  .hero .eyebrow { font-size: .57rem !important; letter-spacing: .13em !important; }
+  .hero-date { font-size: .62rem !important; letter-spacing: .1em !important; }
+  .hero-place { font-size: .56rem !important; letter-spacing: .085em !important; }
+  .round-link { max-width: calc(100vw - 2rem); padding: .76rem 1rem !important; font-size: .61rem !important; }
+}
+@media (max-width: 340px) {
+  .hero h1.couple-names { font-size: 1.35rem !important; }
+  .hero h1.couple-names .names-lockup { gap: .12rem !important; }
+}
+/* Calm refinements: consistent card edges, readable event meta, responsive parents section. */
+.event-card { border-radius: 5px; box-shadow: 0 5px 18px rgba(64,45,51,.035); }
+.event-card:hover { box-shadow: 0 11px 26px rgba(64,45,51,.075); }
+.event-photo { background-color: #eadbd4; }
+.event-copy { padding: 1.2rem clamp(.95rem, 1.35vw, 1.35rem) 1.3rem; }
+.event-meta { line-height: 1.75; }
+@media (prefers-reduced-motion: reduce) {
+  .hero h1.couple-names .names-lockup, .hero h1.couple-names .name-heart { animation: none !important; }
+}
