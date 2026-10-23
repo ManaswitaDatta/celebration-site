@@ -400,3 +400,15 @@ img{display:block;max-width:100%}a{color:inherit}p{margin-top:0}button,a{-webkit
 @media (prefers-reduced-motion: reduce) {
   .hero h1.couple-names .names-lockup, .hero h1.couple-names .name-heart { animation: none !important; }
 }
+
+
+/* Separate, optional sightseeing guide invitation */
+.city-guide-prompt{display:flex;align-items:center;justify-content:space-between;gap:2rem;max-width:1240px;margin:0 auto;padding:clamp(2.2rem,4.5vw,3.8rem) clamp(1.1rem,5vw,4.5rem);background:#f6ece7;border-top:1px solid rgba(169,118,124,.16)}
+.city-guide-prompt-copy{max-width:700px}
+.city-guide-prompt .eyebrow{margin-bottom:.5rem}
+.city-guide-prompt h2{margin:0 0 .55rem;font:400 clamp(2rem,4vw,3.3rem)/1.1 "Playfair Display",Georgia,serif;letter-spacing:-.035em;color:#3b2b31}
+.city-guide-prompt h2 em{color:#a9767c;font-weight:400}
+.city-guide-prompt p:not(.eyebrow){margin:0;color:#75696d;font-size:.9rem;line-height:1.8}
+.city-guide-prompt .round-link{white-space:nowrap;flex:0 0 auto;background:#a9767c;color:#fffdfa;border-color:#a9767c}
+.city-guide-prompt .round-link:hover{background:#8f606d;border-color:#8f606d}
+@media(max-width:640px){.city-guide-prompt{flex-direction:column;align-items:flex-start;gap:1.1rem;padding:2rem 1rem}.city-guide-prompt .round-link{white-space:normal}}

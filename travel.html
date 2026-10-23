@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f2">
+  <meta name="description" content="A curated little travel guide for wedding guests visiting Jamshedpur, Agartala and Tripura in February 2027.">
+  <title>A Little More to Explore — Manaswita &amp; Sushmit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .travel-page{background:#fbf7f2;color:#38272e;min-height:100vh}
+    .travel-topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.95rem clamp(1rem,5vw,4.5rem);background:rgba(251,247,242,.94);border-bottom:1px solid rgba(169,118,124,.18);backdrop-filter:blur(14px)}
+    .travel-brand{font:400 clamp(1.15rem,2.1vw,1.55rem)/1.2 "Playfair Display",Georgia,serif;color:#482f39;text-decoration:none;white-space:nowrap}
+    .travel-brand span{color:#a9767c}
+    .travel-back{display:inline-flex;align-items:center;justify-content:center;padding:.68rem .95rem;border:1px solid #c7a3a6;border-radius:999px;color:#8b5e68;text-decoration:none;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;transition:background .2s,color .2s}
+    .travel-back:hover{background:#a9767c;color:#fff}
+    .travel-hero{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:clamp(4rem,9vw,7.5rem) 1.25rem clamp(3.5rem,7vw,6rem);background:linear-gradient(135deg,#f2e3dc 0%,#fbf7f2 54%,#eee0db 100%)}
+    .travel-hero:before,.travel-hero:after{position:absolute;z-index:-1;color:rgba(169,118,124,.13);font-family:"Playfair Display",Georgia,serif;font-size:clamp(9rem,22vw,19rem);line-height:1}
+    .travel-hero:before{content:"❧";left:-.04em;bottom:-.25em;transform:rotate(-18deg)}.travel-hero:after{content:"❧";right:-.04em;top:-.15em;transform:rotate(165deg)}
+    .travel-hero .eyebrow{margin-bottom:.8rem}.travel-hero h1{max-width:900px;margin:0 auto;font:400 clamp(3rem,7.5vw,6.2rem)/1.02 "Playfair Display",Georgia,serif;letter-spacing:-.045em;color:#3a2830}.travel-hero h1 em{color:#a9767c;font-weight:400}.travel-hero .travel-intro{max-width:640px;margin:1.25rem auto 0;color:#78686d;font:italic clamp(1rem,1.8vw,1.18rem)/1.8 "Playfair Display",Georgia,serif}
+    .travel-content{max-width:1440px;margin:0 auto;padding:clamp(2.8rem,5vw,5rem) clamp(1rem,5vw,4.5rem)}
+    .city-section+.city-section{margin-top:clamp(3.8rem,7vw,6.5rem);padding-top:clamp(3rem,5vw,4.5rem);border-top:1px solid #e8d9d3}
+    .city-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.6rem}
+    .city-heading h2{margin:.1rem 0 0;font:400 clamp(2.5rem,4.5vw,3.8rem)/1.08 "Playfair Display",Georgia,serif;letter-spacing:-.035em;color:#3b2b31}
+    .city-heading h2 em{color:#a9767c;font-weight:400}.city-heading p{max-width:430px;margin:0;color:#796b70;font-size:.88rem;line-height:1.8}
+    .travel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    .travel-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:#fffdfa;border:1px solid rgba(169,118,124,.2);border-radius:3px;box-shadow:0 8px 26px rgba(61,43,50,.035);transition:transform .25s,box-shadow .25s}
+    .travel-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(61,43,50,.075)}
+    .travel-photo{width:100%;height:clamp(190px,21vw,290px);object-fit:cover;display:block;background:#eadbd4}
+    .travel-card-body{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:1.2rem 1.25rem 1.3rem}
+    .travel-type{margin:0 0 .45rem;color:#a9767c;font-size:.61rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;line-height:1.65}
+    .travel-card h3{margin:0 0 .55rem;font:400 clamp(1.55rem,2.2vw,2rem)/1.18 "Playfair Display",Georgia,serif;letter-spacing:-.025em;color:#432f38}
+    .travel-card p:not(.travel-type){margin:0 0 .8rem;color:#75696d;font-size:.87rem;line-height:1.75}
+    .travel-card .travel-tip{margin-top:auto!important;padding-top:.65rem;color:#8c7077!important;font-size:.77rem!important;font-style:italic}
+    .travel-map{display:inline-flex;align-items:center;gap:.45rem;margin-top:.25rem;padding:.68rem .05rem .2rem;color:#9a626d;text-decoration:none;font-size:.64rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #d5b6b7}
+    .travel-map:hover{color:#613d4a;border-color:#9a626d}
+    .travel-note{max-width:850px;margin:3.2rem auto 0;padding:1.2rem 1.4rem;border-left:2px solid #c99a9e;background:#f4e9e4;color:#77676c;font-size:.82rem;line-height:1.8}
+    .travel-footer{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;padding:2rem 1rem;background:#eee2dc;text-align:center;color:#725762}
+    .travel-footer p{margin:0;font-size:.64rem;letter-spacing:.13em;text-transform:uppercase}.travel-footer .made{font:italic 1rem "Playfair Display",Georgia,serif;letter-spacing:0;text-transform:none}.travel-footer a{margin-top:.3rem;color:inherit;font-size:.62rem;letter-spacing:.12em;text-decoration:none}
+    @media(max-width:900px){.travel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.travel-photo{height:clamp(210px,32vw,280px)}.city-heading{align-items:flex-start;flex-direction:column}.city-heading p{max-width:650px}}
+    @media(max-width:580px){.travel-topbar{padding:.85rem .9rem}.travel-brand{font-size:1.05rem}.travel-back{padding:.62rem .7rem;font-size:.57rem}.travel-hero{padding:3.5rem 1rem 3.1rem}.travel-hero h1{font-size:clamp(2.8rem,13vw,4.1rem)}.travel-content{padding:2.6rem .9rem 3.2rem}.travel-grid{grid-template-columns:minmax(0,1fr);gap:.95rem}.travel-photo{height:clamp(220px,62vw,320px)}.travel-card-body{padding:1rem 1rem 1.15rem}.travel-card h3{font-size:1.85rem}.city-section+.city-section{margin-top:3.2rem;padding-top:2.6rem}.city-heading h2{font-size:2.75rem}.travel-note{margin-top:2.4rem;padding:1rem}}
+    @media(prefers-reduced-motion:reduce){.travel-card{transition:none}.travel-card:hover{transform:none}}
+  </style>
+</head>
+<body class="travel-page">
+  <header class="travel-topbar">
+    <a class="travel-brand" href="index.html">Manaswita <span>♥</span> Sushmit</a>
+    <a class="travel-back" href="index.html">← Back to invitation</a>
+  </header>
+  <main>
+    <section class="travel-hero">
+      <p class="eyebrow">A NOTE FOR OUR TRAVELLING GUESTS</p>
+      <h1>A little more<br><em>to explore.</em></h1>
+      <p class="travel-intro">If you have a little time before or after the celebrations, here are a few places worth discovering around Jamshedpur and Tripura.</p>
+    </section>
+    <div class="travel-content">
+      <section class="city-section" id="jamshedpur" aria-labelledby="jamshedpur-heading">
+        <div class="city-heading"><div><p class="eyebrow">GARDENS · LAKES · NATURE</p><h2 id="jamshedpur-heading">Around <em>Jamshedpur</em></h2></div><p>From a quiet garden stroll to a scenic drive into the hills, these are easy ways to enjoy a little more of the Steel City.</p></div>
+        <div class="travel-grid">
+          <article class="travel-card"><img class="travel-photo" src="assets/travel-jubilee.jpg" alt="Landscaped formal gardens and fountains at sunset" loading="lazy"><div class="travel-card-body"><p class="travel-type">In the city · Easy visit</p><h3>Jubilee Park</h3><p>A much-loved green space with landscaped gardens, fountains and wide paths—lovely for a relaxed stroll and a breather between celebrations.</p><p class="travel-tip">Best for a short, unhurried visit.</p><a class="travel-map" href="https://www.google.com/maps/search/?api=1&amp;query=Jubilee+Park+Jamshedpur" target="_blank" rel="noopener">Explore on Maps ↗</a></div></article>
+          <article class="travel-card"><img class="travel-photo" src="assets/travel-dimna.jpg" alt="A peaceful lake surrounded by wooded hills" loading="lazy"><div class="travel-card-body"><p class="travel-type">Near the city · Scenic outing</p><h3>Dimna Lake</h3><p>A calm reservoir with the Dalma hills as a backdrop. Go for open views, fresh air and a slower afternoon away from the city bustle.</p><p class="travel-tip">Around 13–15 km from the city; allow time for the drive.</p><a class="travel-map" href="https://www.google.com/maps/search/?api=1&amp;query=Dimna+Lake+Jamshedpur" target="_blank" rel="noopener">Explore on Maps ↗</a></div></article>
+          <article class="travel-card"><img class="travel-photo" src="assets/travel-dalma.jpg" alt="Forest-covered hills in the Dalma range" loading="lazy"><div class="travel-card-body"><p class="travel-type">Nature outing · Half/full day</p><h3>Dalma Wildlife Sanctuary</h3><p>Forested hills, viewpoints and wildlife habitat make this a rewarding option for guests who enjoy nature and the outdoors.</p><p class="travel-tip">Plan ahead and confirm current entry/access arrangements.</p><a class="travel-map" href="https://www.google.com/maps/search/?api=1&amp;query=Dalma+Wildlife+Sanctuary+Jharkhand" target="_blank" rel="noopener">Explore on Maps ↗</a></div></article>
+        </div>
+      </section>
+      <section class="city-section" id="tripura" aria-labelledby="tripura-heading">
+        <div class="city-heading"><div><p class="eyebrow">ROYAL HISTORY · TEMPLES · LAKE PALACES</p><h2>Agartala &amp; <em>Tripura</em></h2></div><p>Stay close to Agartala for a cultural stop, or set aside a day to explore the remarkable places beyond the city.</p></div>
+        <div class="travel-grid">
+          <article class="travel-card"><img class="travel-photo" src="assets/travel-ujjayanta.jpg" alt="A stately white palace with a reflecting pool and gardens" loading="lazy"><div class="travel-card-body"><p class="travel-type">In Agartala · Cultural stop</p><h3>Ujjayanta Palace</h3><p>A striking former royal palace that houses the Tripura State Museum—an elegant introduction to the region’s history and royal heritage.</p><p class="travel-tip">A good option if you have a few hours in the city.</p><a class="travel-map" href="https://www.google.com/maps/search/?api=1&amp;query=Ujjayanta+Palace+Agartala" target="_blank" rel="noopener">Explore on Maps ↗</a></div></article>
+          <article class="travel-card"><img class="travel-photo" src="assets/travel-matabari.jpg" alt="A traditional red-domed temple in a green courtyard" loading="lazy"><div class="travel-card-body"><p class="travel-type">Day trip · Udaipur</p><h3>Matabari Temple</h3><p>Visit the revered Tripura Sundari Temple in Udaipur, with its distinctive red shrine and nearby Kalyan Sagar. You can pair it with other local heritage stops.</p><p class="travel-tip">Allow a good part of the day for the round trip.</p><a class="travel-map" href="https://www.google.com/maps/search/?api=1&amp;query=Tripura+Sundari+Temple+Matabari+Udaipur+Tripura" target="_blank" rel="noopener">Explore on Maps ↗</a></div></article>
+          <article class="travel-card"><img class="travel-photo" src="assets/travel-neermahal.jpg" alt="A royal red-and-white palace reflected in a lake at sunset" loading="lazy"><div class="travel-card-body"><p class="travel-type">Day trip · Melaghar</p><h3>Neermahal</h3><p>Tripura’s celebrated water palace rises from Rudrasagar Lake, with domes and terraces reflected on the water. It is a memorable excursion for architecture and scenery.</p><p class="travel-tip">Roughly 50–60 km from Agartala, depending on your starting point.</p><a class="travel-map" href="https://www.google.com/maps/search/?api=1&amp;query=Neermahal+Melaghar+Tripura" target="_blank" rel="noopener">Explore on Maps ↗</a></div></article>
+        </div>
+      </section>
+      <p class="travel-note"><strong>A small planning note:</strong> These are optional sightseeing ideas, not part of the wedding schedule. Images are illustrative; please use the map links to confirm the exact locations. Check current opening hours, transport and access before setting out. Neermahal and Matabari are best planned as separate day trips rather than squeezed between wedding functions.</p>
+    </div>
+  </main>
+  <footer class="travel-footer"><p class="made">Made with love <span aria-hidden="true">♥</span></p><p>14 — 21 February 2027</p><a href="index.html">BACK TO THE WEDDING INVITATION</a></footer>
+</body>
+</html>
